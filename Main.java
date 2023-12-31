@@ -16,8 +16,8 @@ import javafx.util.Duration;
 
 public class Main extends Application {
 
-    private static final int WIDTH = 800; // ширина окна
-    private static final int HEIGHT = 600; // высота окна
+    private static final int WIDTH = 800; 
+    private static final int HEIGHT = 600; 
 
     @Override
     public void start(Stage primaryStage) {
@@ -25,14 +25,14 @@ public class Main extends Application {
         Scene scene = new Scene(root, WIDTH, HEIGHT);
         primaryStage.setScene(scene);
 
-        // Добавляем фоновое изображение
+        
         Image backgroundImage = new Image("background.jpg");
         ImageView backgroundImageView = new ImageView(backgroundImage);
         backgroundImageView.setFitWidth(WIDTH);
         backgroundImageView.setFitHeight(HEIGHT);
         root.getChildren().add(backgroundImageView);
 
-        // Добавляем огоньки
+        
         for (int i = 0; i < 30; i++) {
             Circle circle = createCircle();
             root.getChildren().add(circle);
@@ -41,7 +41,7 @@ public class Main extends Application {
             timeline.play();
         }
 
-        // Добавляем снегопад
+        
         for (int i = 0; i < 100; i++) {
             Circle snowflake = createSnowflake();
             root.getChildren().add(snowflake);
@@ -50,7 +50,7 @@ public class Main extends Application {
             timeline.play();
         }
 
-        // Добавляем поздравительный текст
+        
         Text greetingText = new Text("С Новым Годом!");
         greetingText.setFont(Font.font("Arial", FontWeight.BOLD, 48));
         greetingText.setFill(Color.WHITE);
